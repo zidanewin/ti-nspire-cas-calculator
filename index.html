@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TI-Nspire CX II CAS Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <div class="header">
+            <h1>TI-Nspire™ CX II CAS</h1>
+        </div>
+        
+        <div class="display-section">
+            <div class="history-display" id="history"></div>
+            <div class="main-display">
+                <input type="text" id="display" class="display-input" readonly>
+                <div class="display-label">Ans = <span id="answer">0</span></div>
+            </div>
+        </div>
+
+        <div class="buttons-container">
+            <!-- Function buttons (top row) -->
+            <div class="button-row function-buttons">
+                <button class="btn fn-btn" data-function="doc">doc</button>
+                <button class="btn fn-btn" data-function="scratchpad">scratchpad</button>
+                <button class="btn fn-btn" data-function="menu">menu</button>
+                <button class="btn fn-btn" data-function="clear">clear</button>
+                <button class="btn fn-btn" data-function="esc">esc</button>
+            </div>
+
+            <!-- Number and basic operation pad -->
+            <div class="button-row">
+                <button class="btn number-btn" data-value="7">7</button>
+                <button class="btn number-btn" data-value="8">8</button>
+                <button class="btn number-btn" data-value="9">9</button>
+                <button class="btn operator-btn" data-operator="/">÷</button>
+                <button class="btn operator-btn" data-operator="^">^</button>
+            </div>
+
+            <div class="button-row">
+                <button class="btn number-btn" data-value="4">4</button>
+                <button class="btn number-btn" data-value="5">5</button>
+                <button class="btn number-btn" data-value="6">6</button>
+                <button class="btn operator-btn" data-operator="*">×</button>
+                <button class="btn special-btn" data-function="sqrt">√</button>
+            </div>
+
+            <div class="button-row">
+                <button class="btn number-btn" data-value="1">1</button>
+                <button class="btn number-btn" data-value="2">2</button>
+                <button class="btn number-btn" data-value="3">3</button>
+                <button class="btn operator-btn" data-operator="-">−</button>
+                <button class="btn special-btn" data-function="fraction">a/b</button>
+            </div>
+
+            <div class="button-row">
+                <button class="btn number-btn" data-value="0">0</button>
+                <button class="btn number-btn" data-value=".">.</button>
+                <button class="btn number-btn" data-value="π">π</button>
+                <button class="btn operator-btn" data-operator="+">+</button>
+                <button class="btn equals-btn" data-function="equals">=</button>
+            </div>
+
+            <!-- Scientific functions -->
+            <div class="button-row">
+                <button class="btn sci-btn" data-function="sin">sin</button>
+                <button class="btn sci-btn" data-function="cos">cos</button>
+                <button class="btn sci-btn" data-function="tan">tan</button>
+                <button class="btn sci-btn" data-function="log">log</button>
+                <button class="btn sci-btn" data-function="ln">ln</button>
+            </div>
+
+            <div class="button-row">
+                <button class="btn sci-btn" data-function="asin">asin</button>
+                <button class="btn sci-btn" data-function="acos">acos</button>
+                <button class="btn sci-btn" data-function="atan">atan</button>
+                <button class="btn sci-btn" data-function="abs">abs</button>
+                <button class="btn sci-btn" data-function="negate">(-)</button>
+            </div>
+
+            <!-- More functions -->
+            <div class="button-row">
+                <button class="btn sci-btn" data-function="factorial">n!</button>
+                <button class="btn sci-btn" data-function="e">e</button>
+                <button class="btn sci-btn" data-function="parenthesis">()</button>
+                <button class="btn sci-btn" data-function="mod">mod</button>
+                <button class="btn sci-btn" data-function="backspace">← bksp</button>
+            </div>
+
+            <!-- Matrix and advanced operations -->
+            <div class="button-row">
+                <button class="btn adv-btn" data-function="matrix">matrix</button>
+                <button class="btn adv-btn" data-function="solve">solve</button>
+                <button class="btn adv-btn" data-function="derivative">d/dx</button>
+                <button class="btn adv-btn" data-function="integral">∫</button>
+                <button class="btn adv-btn" data-function="simplify">simplify</button>
+            </div>
+        </div>
+
+        <div class="mode-indicator">
+            <span id="angle-mode">RAD</span> | <span id="precision">Exact</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
