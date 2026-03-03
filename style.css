@@ -1,245 +1,38 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* Updated style for TI-Nspire CX II Design */
 body {
+    background-color: black;
+    color: white;
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 20px;
 }
 
-.calculator-container {
+#display {
     width: 100%;
-    max-width: 500px;
-    background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%);
-    border-radius: 20px;
-    padding: 20px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1);
-    border: 3px solid #0f3460;
-}
-
-.header {
-    text-align: center;
-    color: #00d4ff;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #0f3460;
-    padding-bottom: 10px;
-}
-
-.header h1 {
-    font-size: 1.8em;
-    font-weight: bold;
-    letter-spacing: 2px;
-    text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
-}
-
-.display-section {
-    background: #0f3460;
-    border-radius: 10px;
-    padding: 15px;
-    margin-bottom: 20px;
-    border: 2px solid #00d4ff;
-}
-
-.history-display {
-    height: 40px;
-    color: #888;
-    font-size: 0.9em;
+    height: 100px;
+    background-color: darkgray;
+    border: 1px solid #a09f9f;
     margin-bottom: 10px;
-    overflow-y: auto;
-    word-break: break-all;
-}
-
-.main-display {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-}
-
-.display-input {
-    width: 100%;
-    background: #0f3460;
-    border: none;
-    color: #00d4ff;
-    font-size: 2em;
-    font-weight: bold;
-    padding: 10px 0;
-    text-align: right;
-    outline: none;
-    font-family: 'Courier New', monospace;
-}
-
-.display-label {
-    color: #888;
-    font-size: 0.9em;
-    text-align: right;
-    margin-top: 5px;
-}
-
-.display-label span {
-    color: #00d4ff;
-    font-weight: bold;
-}
-
-.buttons-container {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-bottom: 15px;
-}
-
-.button-row {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 8px;
-}
-
-.btn {
-    padding: 15px;
-    border: none;
-    border-radius: 8px;
-    font-size: 0.95em;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-.btn:active {
-    transform: scale(0.95);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-}
-
-.btn:hover {
-    filter: brightness(1.1);
-}
-
-/* Number buttons */
-.number-btn {
-    background: #1a1a2e;
-    color: #00d4ff;
-    border: 2px solid #0f3460;
-}
-
-.number-btn:hover {
-    background: #262b45;
-}
-
-/* Operator buttons */
-.operator-btn {
-    background: #ff6b6b;
-    color: white;
-    border: 2px solid #cc5555;
-}
-
-.operator-btn:hover {
-    background: #ff8585;
-}
-
-/* Equals button */
-.equals-btn {
-    background: linear-gradient(135deg, #00d4ff, #00a8cc);
-    color: #0f3460;
-    border: 2px solid #00a8cc;
-    font-size: 1.1em;
-}
-
-.equals-btn:hover {
-    background: linear-gradient(135deg, #00e6ff, #00c0e0);
-}
-
-/* Scientific buttons */
-.sci-btn {
-    background: #4ecdc4;
-    color: #0f3460;
-    border: 2px solid #39b8ad;
-    font-size: 0.85em;
-}
-
-.sci-btn:hover {
-    background: #5fded6;
-}
-
-/* Function buttons */
-.fn-btn {
-    background: #95e1d3;
-    color: #0f3460;
-    border: 2px solid #7bc9b8;
-    font-size: 0.85em;
-}
-
-.fn-btn:hover {
-    background: #a8ede0;
-}
-
-/* Special buttons */
-.special-btn {
-    background: #f38181;
-    color: white;
-    border: 2px solid #da6a6a;
-    font-size: 0.9em;
-}
-
-.special-btn:hover {
-    background: #f59494;
-}
-
-/* Advanced buttons */
-.adv-btn {
-    background: #aa96da;
-    color: white;
-    border: 2px solid #8b73b8;
-    font-size: 0.85em;
-}
-
-.adv-btn:hover {
-    background: #b8a9e8;
-}
-
-.mode-indicator {
     text-align: center;
-    color: #888;
-    font-size: 0.9em;
-    padding: 10px;
-    border-top: 2px solid #0f3460;
-    margin-top: 10px;
+    line-height: 100px;
+    font-size: 24px;
 }
 
-.mode-indicator span {
-    color: #00d4ff;
-    font-weight: bold;
-    margin: 0 5px;
+.button {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    background-color: black;
+    border: 2px solid gray;
+    color: white;
+    text-align: center;
+    line-height: 60px;
+    margin: 5px;
+    transition: background-color 0.3s;
 }
 
-/* Responsive design */
-@media (max-width: 480px) {
-    .calculator-container {
-        padding: 15px;
-        max-width: 100%;
-    }
+.button:hover {
+    background-color: gray;
+}
 
-    .header h1 {
-        font-size: 1.3em;
-    }
-
-    .display-input {
-        font-size: 1.5em;
-    }
-
-    .btn {
-        padding: 12px;
-        font-size: 0.85em;
-    }
-
-    .button-row {
-        gap: 6px;
-    }
+.button:active {
+    background-color: darkgray;
 }
